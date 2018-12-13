@@ -156,6 +156,10 @@ config:
                  "client.id": "cl-con-transfer-prepare",
                  "group.id": "cl-group-transfer-prepare",
                  "metadata.broker.list": "$kafka_host:$kafka_port",
+                 "socket.blocking.max.ms": 1,
+                 "fetch.wait.max.ms": 100,
+                 "fetch.error.backoff.ms": 1,
+                 "enable.auto.commit": true,
                  "socket.keepalive.enable": true
                },
                "topicConf": {
