@@ -904,11 +904,8 @@ central:
                        "socket.blocking.max.ms": 1,
                        "fetch.wait.max.ms": 100,
                        "fetch.error.backoff.ms": 1,
-                       "broker.version.fallback": "0.10.1.0",
-                       "api.version.request": true,
                        "enable.auto.commit": true,
-                       "auto.commit.interval.ms": 200,
-                       "partition.assignment.strategy": "range"
+                       "socket.keepalive.enable": true
                      },
                      "topicConf": {
                        "auto.offset.reset": "earliest"
@@ -934,11 +931,8 @@ central:
                        "socket.blocking.max.ms": 1,
                        "fetch.wait.max.ms": 100,
                        "fetch.error.backoff.ms": 1,
-                       "broker.version.fallback": "0.10.1.0",
-                       "api.version.request": true,
                        "enable.auto.commit": true,
-                       "auto.commit.interval.ms": 200,
-                       "partition.assignment.strategy": "range"
+                       "socket.keepalive.enable": true
                      },
                      "topicConf": {
                        "auto.offset.reset": "earliest"
@@ -964,10 +958,8 @@ central:
                        "socket.blocking.max.ms": 1,
                        "fetch.wait.max.ms": 100,
                        "fetch.error.backoff.ms": 1,
-                       "broker.version.fallback": "0.10.1.0",
-                       "api.version.request": true,
                        "enable.auto.commit": true,
-                       "auto.commit.interval.ms": 200
+                       "socket.keepalive.enable": true
                      },
                      "topicConf": {
                        "auto.offset.reset": "earliest"
@@ -995,10 +987,8 @@ central:
                        "socket.blocking.max.ms": 1,
                        "fetch.wait.max.ms": 100,
                        "fetch.error.backoff.ms": 1,
-                       "broker.version.fallback": "0.10.1.0",
-                       "api.version.request": true,
                        "enable.auto.commit": true,
-                       "auto.commit.interval.ms": 200
+                       "socket.keepalive.enable": true
                      },
                      "topicConf": {
                        "auto.offset.reset": "earliest"
@@ -1024,10 +1014,8 @@ central:
                        "socket.blocking.max.ms": 1,
                        "fetch.wait.max.ms": 100,
                        "fetch.error.backoff.ms": 1,
-                       "broker.version.fallback": "0.10.1.0",
-                       "api.version.request": true,
                        "enable.auto.commit": true,
-                       "auto.commit.interval.ms": 200
+                       "socket.keepalive.enable": true
                      },
                      "topicConf": {
                        "auto.offset.reset": "earliest"
@@ -1053,10 +1041,8 @@ central:
                        "socket.blocking.max.ms": 1,
                        "fetch.wait.max.ms": 100,
                        "fetch.error.backoff.ms": 1,
-                       "broker.version.fallback": "0.10.1.0",
-                       "api.version.request": true,
                        "enable.auto.commit": true,
-                       "auto.commit.interval.ms": 200
+                       "socket.keepalive.enable": true
                      },
                      "topicConf": {
                        "auto.offset.reset": "earliest"
