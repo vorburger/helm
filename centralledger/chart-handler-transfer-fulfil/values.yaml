@@ -126,8 +126,10 @@ config:
   kafka_port: 9092
   kafka_partitioner: 'murmur2_random'
 
-  ## Cache config
+  ## Cache configuration
+  cache_enabled: false
   cache_max_byte_size: 10000000
+  cache_expires_in_ms: 1000
 
   ## Log Configuration
   log_level: info
