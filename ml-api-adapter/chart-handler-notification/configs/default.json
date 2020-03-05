@@ -87,7 +87,8 @@
                             "client.id": "ml-con-notification-event",
                             "group.id": "ml-group-notification-event",
                             "metadata.broker.list": "{{ $kafkaHost }}:{{ .Values.config.kafka_port }}",
-                            "socket.keepalive.enable": true
+                            "socket.keepalive.enable": true,
+                            "auto.commit.interval.ms": "{{ .Values.config.kafka_autocommit_interval_ms }}"
                         },
                         "topicConf": {
                             "auto.offset.reset": "earliest"
