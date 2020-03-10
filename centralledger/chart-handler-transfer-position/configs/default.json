@@ -46,6 +46,7 @@
     },
     "HANDLERS": {
         "DISABLED": false,
+        "OVERRIDE_DISABLED": {},
         "API": {
             "DISABLED": false
         },
