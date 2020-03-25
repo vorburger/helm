@@ -129,6 +129,8 @@ spec:
               value: {{ .Values.config.event_traceid_per_vendor | quote }}
             - name: FULFIL_DUPLICATE_INSERT_MODE
               value: {{ .Values.config.duplicate_fulfil_mode | quote }}
+            - name: RAW_FULFILPOSITION
+              value: {{ .Values.config.raw_fulfilposition_enabled | quote }}
           volumeMounts:
           - name: {{ template "centralledger-handler-transfer-fulfil.fullname" . }}-config-volume
             mountPath: /opt/central-ledger/config

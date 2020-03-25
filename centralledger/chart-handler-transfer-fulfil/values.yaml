@@ -151,6 +151,9 @@ config:
   ## Config for duplicate processing
   duplicate_fulfil_mode: 'DEFAULT'
 
+  ## Config for Fulfil Position Handler Processing Mode - false: As-Is, true: Optimised
+  raw_fulfilposition_enabled: false
+
 init:
   enabled: true
   kafka:
