@@ -131,6 +131,14 @@ config:
     include_cause_extension: false
     truncate_extensions: true
 
+  ## HTTP Config for Callbacks
+  http_config:
+    httpAgent:
+      keepAlive: true
+      keepAliveMsecs: 1000
+      maxSockets: 20
+      maxFreeSockets: 20
+
 service:
   type: ClusterIP
   externalPort: 80

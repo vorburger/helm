@@ -22,3 +22,9 @@ data:
   METRICS_PREFIX: {{ .Values.metrics.prefix | quote }}
   METRICS_TIMEOUT: {{ .Values.metrics.timeout | quote }}
   METRICS_SERVICENAME: {{ .Values.metrics.defaultLabels.serviceName }}
+  HTTP_KEEPALIVE: "true"
+  HTTP_KEEPALIVEMS: "1000"
+  HTTP_MAXSOCKETS: "20"
+  HTTP_MAXFREESOCKETS: "20"
+  HTTP_TIMEOUTMS: "1000"
+  HTTP_HOST_PORT: "8999"
