@@ -59,7 +59,7 @@ spec:
       dnsConfig:
         options:
         - name: attempts
-          value: "2"
+          value: "4"
       dnsPolicy: ClusterFirst
       containers:
         - name: {{ .Chart.Name }}
