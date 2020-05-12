@@ -121,7 +121,7 @@ spec:
             - name: KAFKA_CONCURRENCY
               value: {{ .Values.config.kafka_concurency | quote }}
             - name: KAFKA_BATCH_COUNT
-              value: {{ .Values.config.kafka_batch_size | quote }}
+              value: {{ .Values.config.kafka_batch_count | quote }}
             - name: KAFKA_BATCH_TIMEOUT
               value: {{ .Values.config.kafka_batch_timeout | quote }}
         {{- if .Values.sidecar.enabled }}
