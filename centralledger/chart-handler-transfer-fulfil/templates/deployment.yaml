@@ -131,6 +131,12 @@ spec:
               value: {{ .Values.config.duplicate_fulfil_mode | quote }}
             - name: RAW_FULFILPOSITION
               value: {{ .Values.config.raw_fulfilposition_enabled | quote }}
+            - name: KAFKA_CONCURRENCY
+              value: {{ .Values.config.kafka_concurency | quote }}
+            - name: KAFKA_BATCH_COUNT
+              value: {{ .Values.config.kafka_batch_size | quote }}
+            - name: KAFKA_BATCH_TIMEOUT
+              value: {{ .Values.config.kafka_batch_timeout | quote }}
           volumeMounts:
           - name: {{ template "centralledger-handler-transfer-fulfil.fullname" . }}-config-volume
             mountPath: /opt/central-ledger/config

@@ -131,6 +131,12 @@ spec:
               value: {{ .Values.config.event_traceid_per_vendor | quote }}
             - name: PREPARE_DUPLICATE_INSERT_MODE
               value: {{ .Values.config.duplicate_prepare_mode | quote }}
+            - name: KAFKA_CONCURRENCY
+              value: {{ .Values.config.kafka_concurency | quote }}
+            - name: KAFKA_BATCH_COUNT
+              value: {{ .Values.config.kafka_batch_size | quote }}
+            - name: KAFKA_BATCH_TIMEOUT
+              value: {{ .Values.config.kafka_batch_timeout | quote }}
           volumeMounts:
           - name: {{ template "centralledger-handler-transfer-prepare.fullname" . }}-config-volume
             mountPath: /opt/central-ledger/config
