@@ -120,7 +120,7 @@
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurrency }},
                             "sync": false
                         },
                         "rdkafkaConf": {
@@ -146,7 +146,7 @@
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurrency }},
                             "sync": false
                         },
                         "rdkafkaConf": {
@@ -172,7 +172,7 @@
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurrency }},
                             "sync": false
                         },
                         "rdkafkaConf": {
@@ -200,7 +200,7 @@
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurrency }},
                             "sync": false
                         },
                         "rdkafkaConf": {
@@ -226,7 +226,7 @@
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurrency }},
                             "sync": false
                         },
                         "rdkafkaConf": {
@@ -252,7 +252,7 @@
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurrency }},
                             "sync": false
                         },
                         "rdkafkaConf": {
@@ -278,7 +278,7 @@
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurrency }},
                             "sync": false
                         },
                         "rdkafkaConf": {
@@ -306,7 +306,7 @@
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurrency }},
                             "sync": false
                         },
                         "rdkafkaConf": {

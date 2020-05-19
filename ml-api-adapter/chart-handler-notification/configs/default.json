@@ -83,7 +83,7 @@
                             "messageAsJSON": true,
                             "sync": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
+                            "consumeConcurrency": {{ .Values.config.kafka_concurrency }}
                         },
                         "rdkafkaConf": {
                             "client.id": "ml-con-notification-event",
