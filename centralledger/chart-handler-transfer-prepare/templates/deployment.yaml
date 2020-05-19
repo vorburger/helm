@@ -132,11 +132,16 @@ spec:
             - name: PREPARE_DUPLICATE_INSERT_MODE
               value: {{ .Values.config.duplicate_prepare_mode | quote }}
             - name: KAFKA_CONCURRENCY
-              value: {{ .Values.config.kafka_concurency | quote }}
+              value: {{ .Values.config.kafka_concurrency | quote }}
             - name: KAFKA_BATCH_COUNT
               value: {{ .Values.config.kafka_batch_count | quote }}
             - name: KAFKA_BATCH_TIMEOUT
               value: {{ .Values.config.kafka_batch_timeout | quote }}
+            - name: ASYNC_CHAINED_MODE
+              value: {{ .Values.config.kafka_async_chained_mode | quote }}
+            - name: UV_THREADPOOL_SIZE
+              value: {{ .Values.config.uv_threadpool_size | quote }}
+              
           volumeMounts:
           - name: {{ template "centralledger-handler-transfer-prepare.fullname" . }}-config-volume
             mountPath: /opt/central-ledger/config

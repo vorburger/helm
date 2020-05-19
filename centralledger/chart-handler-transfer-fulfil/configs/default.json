@@ -119,9 +119,9 @@
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
-                            "sync": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "sync": false
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-bulk-prepare",
@@ -145,7 +145,7 @@
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
-                            "sync": true,
+                            "sync": false,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
                             "consumeConcurrency": {{ .Values.config.kafka_concurency }}
                         },
@@ -171,9 +171,9 @@
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
-                            "sync": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "sync": false
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-bulk-fulfil",
@@ -199,9 +199,9 @@
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
-                            "sync": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "sync": false
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-transfer-prepare",
@@ -225,9 +225,9 @@
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
-                            "sync": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "sync": false
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-transfer-position",
@@ -251,9 +251,9 @@
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
-                            "sync": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "sync": false
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-transfer-fulfil",
@@ -277,9 +277,9 @@
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
-                            "sync": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "sync": false
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-transfer-get",
@@ -305,9 +305,9 @@
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
-                            "sync": true,
                             "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
-                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }},
+                            "sync": false
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-transfer-admin",
