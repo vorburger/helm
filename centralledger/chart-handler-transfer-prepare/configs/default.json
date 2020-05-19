@@ -113,20 +113,22 @@
                 "PREPARE": {
                     "config": {
                         "options": {
-                            "mode": 2,
-                            "batchSize": 1,
+                            "mode": {{ .Values.config.kafka_mode | default 2 }},
+                            "batchSize": {{ .Values.config.kafka_batch_count | default 1 }},
                             "pollFrequency": 10,
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "sync": true,
-                            "consumeTimeout": 1000
+                            "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-bulk-prepare",
                             "group.id": "cl-group-bulk-prepare",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "socket.keepalive.enable": true,
+                            "enable.auto.commit": true,
                             "auto.commit.interval.ms": "{{ .Values.config.kafka_autocommit_interval_ms }}"
                         },
                         "topicConf": {
@@ -137,20 +139,22 @@
                 "PROCESSING": {
                     "config": {
                         "options": {
-                            "mode": 2,
-                            "batchSize": 1,
+                            "mode": {{ .Values.config.kafka_mode | default 2 }},
+                            "batchSize": {{ .Values.config.kafka_batch_count | default 1 }},
                             "pollFrequency": 10,
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "sync": true,
-                            "consumeTimeout": 1000
+                            "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-bulk-processing",
                             "group.id": "cl-group-bulk-processing",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "socket.keepalive.enable": true,
+                            "enable.auto.commit": true,
                             "auto.commit.interval.ms": "{{ .Values.config.kafka_autocommit_interval_ms }}"
                         },
                         "topicConf": {
@@ -161,20 +165,22 @@
                 "FULFIL": {
                     "config": {
                         "options": {
-                            "mode": 2,
-                            "batchSize": 1,
+                            "mode": {{ .Values.config.kafka_mode | default 2 }},
+                            "batchSize": {{ .Values.config.kafka_batch_count | default 1 }},
                             "pollFrequency": 10,
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "sync": true,
-                            "consumeTimeout": 1000
+                            "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-bulk-fulfil",
                             "group.id": "cl-group-bulk-fulfil",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "socket.keepalive.enable": true,
+                            "enable.auto.commit": true,
                             "auto.commit.interval.ms": "{{ .Values.config.kafka_autocommit_interval_ms }}"
                         },
                         "topicConf": {
@@ -187,20 +193,22 @@
                 "PREPARE": {
                     "config": {
                         "options": {
-                            "mode": 2,
-                            "batchSize": 1,
+                            "mode": {{ .Values.config.kafka_mode | default 2 }},
+                            "batchSize": {{ .Values.config.kafka_batch_count | default 1 }},
                             "pollFrequency": 10,
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "sync": true,
-                            "consumeTimeout": 1000
+                            "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-transfer-prepare",
                             "group.id": "cl-group-transfer-prepare",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "socket.keepalive.enable": true,
+                            "enable.auto.commit": true,
                             "auto.commit.interval.ms": "{{ .Values.config.kafka_autocommit_interval_ms }}"
                         },
                         "topicConf": {
@@ -211,20 +219,22 @@
                 "POSITION": {
                     "config": {
                         "options": {
-                            "mode": 2,
-                            "batchSize": 1,
+                            "mode": {{ .Values.config.kafka_mode | default 2 }},
+                            "batchSize": {{ .Values.config.kafka_batch_count | default 1 }},
                             "pollFrequency": 10,
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "sync": true,
-                            "consumeTimeout": 1000
+                            "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-transfer-position",
                             "group.id": "cl-group-transfer-position",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "socket.keepalive.enable": true,
+                            "enable.auto.commit": true,
                             "auto.commit.interval.ms": "{{ .Values.config.kafka_autocommit_interval_ms }}"
                         },
                         "topicConf": {
@@ -235,20 +245,22 @@
                 "FULFIL": {
                     "config": {
                         "options": {
-                            "mode": 2,
-                            "batchSize": 1,
+                            "mode": {{ .Values.config.kafka_mode | default 2 }},
+                            "batchSize": {{ .Values.config.kafka_batch_count | default 1 }},
                             "pollFrequency": 10,
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "sync": true,
-                            "consumeTimeout": 1000
+                            "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-transfer-fulfil",
                             "group.id": "cl-group-transfer-fulfil",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "socket.keepalive.enable": true,
+                            "enable.auto.commit": true,
                             "auto.commit.interval.ms": "{{ .Values.config.kafka_autocommit_interval_ms }}"
                         },
                         "topicConf": {
@@ -259,20 +271,22 @@
                 "GET": {
                     "config": {
                         "options": {
-                            "mode": 2,
-                            "batchSize": 1,
+                            "mode": {{ .Values.config.kafka_mode | default 2 }},
+                            "batchSize": {{ .Values.config.kafka_batch_count | default 1 }},
                             "pollFrequency": 10,
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "sync": true,
-                            "consumeTimeout": 1000
+                            "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-transfer-get",
                             "group.id": "cl-group-transfer-get",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "socket.keepalive.enable": true,
+                            "enable.auto.commit": true,
                             "auto.commit.interval.ms": "{{ .Values.config.kafka_autocommit_interval_ms }}"
                         },
                         "topicConf": {
@@ -285,20 +299,22 @@
                 "TRANSFER": {
                     "config": {
                         "options": {
-                            "mode": 2,
-                            "batchSize": 1,
+                            "mode": {{ .Values.config.kafka_mode | default 2 }},
+                            "batchSize": {{ .Values.config.kafka_batch_count | default 1 }},
                             "pollFrequency": 10,
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "sync": true,
-                            "consumeTimeout": 1000
+                            "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
                         },
                         "rdkafkaConf": {
                             "client.id": "cl-con-transfer-admin",
                             "group.id": "cl-group-transfer-admin",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "socket.keepalive.enable": true,
+                            "enable.auto.commit": true,
                             "auto.commit.interval.ms": "{{ .Values.config.kafka_autocommit_interval_ms }}"
                         },
                         "topicConf": {

@@ -76,19 +76,21 @@
                 "EVENT": {
                     "config": {
                         "options": {
-                            "mode": 2,
-                            "batchSize": 1,
+                            "mode": {{ .Values.config.kafka_mode | default 2 }},
+                            "batchSize": {{ .Values.config.kafka_batch_count | default 1 }},
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
                             "sync": true,
-                            "consumeTimeout": 1000
+                            "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurency }}
                         },
                         "rdkafkaConf": {
                             "client.id": "ml-con-notification-event",
                             "group.id": "ml-group-notification-event",
                             "metadata.broker.list": "{{ $kafkaHost }}:{{ .Values.config.kafka_port }}",
                             "socket.keepalive.enable": true,
+                            "enable.auto.commit": true,
                             "auto.commit.interval.ms": "{{ .Values.config.kafka_autocommit_interval_ms }}"
                         },
                         "topicConf": {
