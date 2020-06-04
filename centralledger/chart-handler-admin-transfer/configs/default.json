@@ -121,6 +121,8 @@
                             "consumeTimeout": 1000
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "client.id": "cl-con-bulk-prepare",
                             "group.id": "cl-group-bulk-prepare",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
@@ -144,6 +146,8 @@
                             "consumeTimeout": 1000
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "client.id": "cl-con-bulk-processing",
                             "group.id": "cl-group-bulk-processing",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
@@ -167,6 +171,8 @@
                             "consumeTimeout": 1000
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "client.id": "cl-con-bulk-fulfil",
                             "group.id": "cl-group-bulk-fulfil",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
@@ -192,6 +198,8 @@
                             "consumeTimeout": 1000
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "client.id": "cl-con-transfer-prepare",
                             "group.id": "cl-group-transfer-prepare",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
@@ -215,6 +223,8 @@
                             "consumeTimeout": 1000
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "client.id": "cl-con-transfer-position",
                             "group.id": "cl-group-transfer-position",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
@@ -238,6 +248,8 @@
                             "consumeTimeout": 1000
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "client.id": "cl-con-transfer-fulfil",
                             "group.id": "cl-group-transfer-fulfil",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
@@ -261,6 +273,8 @@
                             "consumeTimeout": 1000
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "client.id": "cl-con-transfer-get",
                             "group.id": "cl-group-transfer-get",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
@@ -286,6 +300,8 @@
                             "consumeTimeout": 1000
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "client.id": "cl-con-transfer-admin",
                             "group.id": "cl-group-transfer-admin",
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
@@ -306,6 +322,8 @@
                             "messageCharset": "utf8"
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "client.id": "cl-prod-bulk-processing",
                             "event_cb": true,
@@ -327,6 +345,8 @@
                             "messageCharset": "utf8"
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "client.id": "cl-prod-transfer-prepare",
                             "event_cb": true,
@@ -346,6 +366,8 @@
                             "messageCharset": "utf8"
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "client.id": "cl-prod-transfer-position",
                             "event_cb": true,
@@ -365,6 +387,8 @@
                             "messageCharset": "utf8"
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "client.id": "cl-prod-transfer-fulfil",
                             "event_cb": true,
@@ -384,6 +408,8 @@
                             "messageCharset": "utf8"
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "client.id": "cl-prod-transfer-get",
                             "event_cb": true,
@@ -405,6 +431,8 @@
                             "messageCharset": "utf8"
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "client.id": "cl-prod-notification-event",
                             "event_cb": true,
@@ -426,6 +454,8 @@
                             "messageCharset": "utf8"
                         },
                         "rdkafkaConf": {
+                           "event_cb": true,
+                           "statistics.interval.ms": 3000,
                             "metadata.broker.list": "{{ (default .Values.config.kafka_host $kafkaHost) }}:{{ .Values.config.kafka_port }}",
                             "client.id": "admin-transfer-produce",
                             "event_cb": true,

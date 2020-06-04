@@ -76,15 +76,19 @@
                 "EVENT": {
                     "config": {
                         "options": {
-                            "mode": 2,
-                            "batchSize": 1,
+                            "mode": {{ .Values.config.kafka_mode }},
+                            "batchSize": {{ .Values.config.kafka_batch_count | default 1 }},
+                            "pollFrequency": 10,
                             "recursiveTimeout": 100,
                             "messageCharset": "utf8",
                             "messageAsJSON": true,
-                            "sync": true,
-                            "consumeTimeout": 1000
+                            "consumeTimeout": {{ .Values.config.kafka_batch_timeout }},
+                            "consumeConcurrency": {{ .Values.config.kafka_concurrency }},
+                            "sync": {{ .Values.config.kafka_sync | default true }}
                         },
                         "rdkafkaConf": {
+                            "event_cb": true,
+                            "statistics.interval.ms": 3000,
                             "client.id": "ml-con-notification-event",
                             "group.id": "ml-group-notification-event",
                             "metadata.broker.list": "{{ $kafkaHost }}:{{ .Values.config.kafka_port }}",
@@ -105,6 +109,7 @@
                             "messageCharset": "utf8"
                         },
                         "rdkafkaConf": {
+                            "statistics.interval.ms": 3000,
                             "metadata.broker.list": "{{ $kafkaHost }}:{{ .Values.config.kafka_port }}",
                             "client.id": "ml-prod-transfer-prepare",
                             "event_cb": true,
@@ -124,6 +129,7 @@
                             "messageCharset": "utf8"
                         },
                         "rdkafkaConf": {
+                            "statistics.interval.ms": 3000,
                             "metadata.broker.list": "{{ $kafkaHost }}:{{ .Values.config.kafka_port }}",
                             "client.id": "ml-prod-transfer-fulfil",
                             "event_cb": true,
